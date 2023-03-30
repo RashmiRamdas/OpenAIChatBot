@@ -1,7 +1,7 @@
 import { Configuration, OpenAIApi } from "openai";
 
 const configuration = new Configuration({
-    apiKey: "API_KEY",
+  apiKey: "API_KEY",
 });
 const openai = new OpenAIApi(configuration);
 
@@ -16,6 +16,7 @@ class ActionProvider {
       .createCompletion({
         model: "text-davinci-003",
         prompt: lowerCaseMessage,
+        max_tokens: 200,
       })
       .then((response) => {
         const message = response.data.choices[0].text;
