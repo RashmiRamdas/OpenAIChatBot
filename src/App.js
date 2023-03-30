@@ -1,10 +1,9 @@
 import "./App.css";
-import Chat from "./Chat/Chat";
 import Chatbot from "react-chatbot-kit";
 
-import ActionProvider from "./Chat/SimpleBot/ActionProvider";
-import MessageParser from "./Chat/SimpleBot/MessageParser";
-import config from "./Chat/SimpleBot/config";
+import ActionProvider from "./Chat/ActionProvider";
+import MessageParser from "./Chat/MessageParser";
+import config from "./Chat/config";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -38,12 +37,5 @@ function App() {
   );
 }
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <Chat />
-//     </div>
-//   );
-// }
 
 export default App;
