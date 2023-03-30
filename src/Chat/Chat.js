@@ -9,7 +9,7 @@ const Chat = () => {
   };
 
   const configuration = new Configuration({
-    apiKey: "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",
+    apiKey: "API_KEY",
   });
   const openai = new OpenAIApi(configuration);
 
