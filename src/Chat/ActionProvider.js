@@ -12,19 +12,19 @@ class ActionProvider {
   }
 
   greet(lowerCaseMessage) {
-    openai
-      .createCompletion({
-        model: "text-davinci-003",
-        prompt: lowerCaseMessage,
-        max_tokens: 200,
-      })
-      .then((response) => {
-        const message = response.data.choices[0].text;
-        const greetingMessage = this.createChatBotMessage(message);
-        this.updateChatbotState(greetingMessage);
-      });
-    // const greetingMessage = this.createChatBotMessage("Hi, friend.");
-    // this.updateChatbotState(greetingMessage);
+    // openai
+    //   .createCompletion({
+    //     model: "text-davinci-003",
+    //     prompt: lowerCaseMessage,
+    //     max_tokens: 200,
+    //   })
+    //   .then((response) => {
+    //     const message = response.data.choices[0].text;
+    //     const greetingMessage = this.createChatBotMessage(message);
+    //     this.updateChatbotState(greetingMessage);
+    //   });
+    const greetingMessage = this.createChatBotMessage("Hi, friend.");
+    this.updateChatbotState(greetingMessage);
   }
 
   updateChatbotState(message) {
